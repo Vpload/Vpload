@@ -1,6 +1,6 @@
 ![Logo](https://avatars2.githubusercontent.com/u/12774718?s=150)
 
-Up1: A Client-side Encrypted Image Host
+Vpload: A Client-side Encrypted Image Host
 ===
 
 Up1 is a simple host that client-side encrypts images, text, and other data, and stores them, with the server knowing nothing about the contents.
@@ -8,12 +8,21 @@ It has the ability to view images, text with syntax highlighting, short videos, 
 
 Public Server
 ---
-There was a public, free to use server at https://up1.ca.  
-This demo instance is no longer available or being maintained. However, there are several public hosts which use up1. An online search should turn up some results.
+-We currently run a public, free to use server at https://vpload.com.
+-
+-Example image: https://vpload.com/#Iik7pwKK7yFybIK-GbCj3g - [(source)](https://pixabay.com/en/cyprus-cavo-greko-national-park-3184019/). *Hint: Try double-clicking on the image, and dragging around the image to zoom in and out, RES-style!*
+-
+-Example text paste: https://vpload.com/#u8pmTFwVCG9RoeEpSLSDHw - [(source)](http://www.publicdomainpoems.com/ocaptainmycaptain.html)
+-
+-Example short video: https://vpload.com/#GfWb6noMR76SRmv1kY-3Gg - [(source)](https://youtu.be/O6Xo21L0ybE)
+-
+-Example download file: https://vpload.com/#PDd9V30-H4qcFjurKsG-Kw - [(source)](https://github.com/Upload/Vpload/releases/tag/v9.10.1)
+-
+-This server is open to all users, so feel free to upload your own files.
 
 #### Client Utilities:
-* [ShareX](https://github.com/ShareX/ShareX), a popular screenshot and image uploader, now merged with Up1 support
-* [upclient](https://github.com/Upload/upclient), a command-line tool for uploading to Up1 servers
+* [ShareX](https://github.com/Vpload/ShareX), a popular screenshot and image uploader, now merged with Up1 support
+* [upclient](https://github.com/Vpload/upclient), a command-line tool for uploading to Vpload servers
 
 Quick start
 ---
