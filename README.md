@@ -16,7 +16,7 @@ Public Server
 -
 -Example short video: https://vpload.com/#GfWb6noMR76SRmv1kY-3Gg - [(source)](https://youtu.be/O6Xo21L0ybE)
 -
--Example download file: https://vpload.com/#PDd9V30-H4qcFjurKsG-Kw - [(source)](https://github.com/Upload/Vpload/releases/tag/v9.10.1)
+-Example download file: https://vpload.com/#PDd9V30-H4qcFjurKsG-Kw - [(source)](https://github.com/Vpload/ShareX/tree/master/ShareX/bin/Release)
 -
 -This server is open to all users, so feel free to upload your own files.
 
