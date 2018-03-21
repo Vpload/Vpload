@@ -1,16 +1,16 @@
 {
-  "name": "Up1",
+  "name": "Vpload",
   "version": "0.3.1",
   "description": "Client-side encrypted host for images, text, and other forms of data.",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/upload/up1"
+    "url": "git://github.com/vpload/vpload"
   },
-  "author": "The Up1 Authors",
+  "author": "The Vpload Authors",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/upload/up1/issues"
+    "url": "https://github.com/vpload/vpload/issues"
   },
   "dependencies": {
     "busboy": "^0.2.12",

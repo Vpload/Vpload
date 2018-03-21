@@ -74,7 +74,7 @@ upload.modules.addmodule({
         console.log(contentroot)
         delete this._['text']
         this._.filename.hide()
-        this._.title.text("Up1")
+        this._.title.text("Vpload")
         this._.btns.hide()
         this._.editpaste.hide()
         this._.newupload.hide()
@@ -85,7 +85,7 @@ upload.modules.addmodule({
         upload.updown.download(content, this.progress.bind(this), this.downloaded.bind(this))
     },
     unrender: function () {
-        this._.title.text('Up1')
+        this._.title.text('Vpload')
         delete this['_']
     },
     /* These mimes are trusted, anything not on this list will not embed
@@ -150,7 +150,7 @@ upload.modules.addmodule({
     },
     downloaded: function (data) {
         this._.filename.text(data.header.name)
-        this._.title.text(data.header.name + ' - Up1')
+        this._.title.text(data.header.name + ' - Vpload')
 
         var stored = this.delkeys[data.ident]
 
