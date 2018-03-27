@@ -3,7 +3,7 @@
 Vpload: A Client-side Encrypted Image Host
 ===
 
-Up1 is a simple host that client-side encrypts images, text, and other data, and stores them, with the server knowing nothing about the contents.
+Vpload is a simple host that client-side encrypts images, text, and other data, and stores them, with the server knowing nothing about the contents.
 It has the ability to view images, text with syntax highlighting, short videos, and arbitrary binaries as downloadables.
 
 Public Server
@@ -21,7 +21,8 @@ Public Server
 -This server is open to all users, so feel free to upload your own files.
 
 #### Client Utilities:
-* [ShareX](https://github.com/Vpload/ShareX), a popular screenshot and image uploader, now merged with Up1 support
+* [ShareX](https://github.com/Vpload/ShareX), a popular screenshot and image uploader, now merged with 
+support
 * [upclient](https://github.com/Vpload/upclient), a command-line tool for uploading to Vpload servers
 
 Quick start
@@ -29,15 +30,15 @@ Quick start
 To install and run the server with default settings:
 
     apt-get install nodejs
-    git clone https://github.com/Upload/Up1
-    cd Up1
+    git clone https://github.com/Vpload/Vpload
+    cd Vpload
     cp server/server.conf.example server/server.conf
     cp client/config.js.example client/config.js
     cd server
     npm install
     node server.js
 
-Server configuration is done through the [`server.conf`](https://github.com/Upload/Up1/server.conf.example) file. For a quick start, simply move `server.conf.example` to `server.conf`.
+Server configuration is done through the [`server.conf`](https://github.com/Vpload/Vpload/server.conf.example) file. For a quick start, simply move `server.conf.example` to `server.conf`.
 
 `listen` is an `address:port`-formatted string, where either one are optional. Some examples include `":9000"` to listen on any interface, port 9000; `"1.2.3.4"` to listen on localhost port 80; `"1.1.1.1:8080"` to listen on 1.1.1.1 port 8080; or even `""` to listen on any interface, port 80.
 
@@ -49,18 +50,18 @@ Server configuration is done through the [`server.conf`](https://github.com/Uplo
 
 There are three additional sections in the configuration file: `http`, `https` and `cloudflare-cache-invalidate`. The first two are fairly self-explanitory (and at least one must be enabled).
 
-`cloudflare-cache-invalidate` is disabled by default and only useful if you choose to run the Up1 server behind Cloudflare. When this section is enabled, it ensures that when an upload is deleted, Cloudflare doesn't hold on to copies of the upload on its edge servers by sending an API call to invalidate it.
+`cloudflare-cache-invalidate` is disabled by default and only useful if you choose to run the Vpload server behind Cloudflare. When this section is enabled, it ensures that when an upload is deleted, Cloudflare doesn't hold on to copies of the upload on its edge servers by sending an API call to invalidate it.
 
-For the web application configuration, a [`config.js.example`](https://github.com/Upload/Up1/config.js.example) file is provided. Make sure the `api_key` here matches the one in `server.conf`.
+For the web application configuration, a [`config.js.example`](https://github.com/Vpload/Vpload/config.js.example) file is provided. Make sure the `api_key` here matches the one in `server.conf`.
 
 External Tools
 ---
 
-Currently, there are two external programs adapted to work with Up1: [ShareX](https://github.com/ShareX/ShareX) ([relevant code](https://github.com/ShareX/ShareX/pull/751)), and [upclient](https://github.com/Upload/upclient).
+Currently, there are two external programs adapted to work with Vpload: [ShareX](https://github.com/ShareX/ShareX) ([relevant code](https://github.com/ShareX/ShareX/pull/751)), and [upclient](https://github.com/Upload/upclient).
 
-ShareX is a popular screenshot tool which supports tons of upload services, not just for images but also for text, video, documents, etc. ShareX includes a service which can send files to any Up1 server. It uses .NET BouncyCastle for the crypto.
+ShareX is a popular screenshot tool which supports tons of upload services, not just for images but also for text, video, documents, etc. ShareX includes a service which can send files to any Vpload server. It uses .NET BouncyCastle for the crypto.
 
-Upclient is a CLI tool which can send files or data to Up1 servers either via unix pipe (`ps aux | up`), or via argument (`up image.png`), and returns a URL to the uploaded file on stdout. It runs on nodejs and uses SJCL for the crypto.
+Upclient is a CLI tool which can send files or data to Vpload servers either via unix pipe (`ps aux | up`), or via argument (`up image.png`), and returns a URL to the uploaded file on stdout. It runs on nodejs and uses SJCL for the crypto.
 
 How it works
 ---
@@ -90,7 +91,7 @@ Caveats
 * **As a new project, this code hasn't been audited by a trusted party.** Since this is brand new, there have been (to date) very few eyes on the code, and even fewer trusted eyes on the code. While we've put as much effort as possible into offloading the hard crypto stuff to SJCL, we still might have made a mistake somewhere (reading over `static/js/encryption.js` and letting us know if you find issues would be very helpful to us!), and so for that reason, using this software is at your own risk.
 
 * **The server will, in most cases, receive referrer headers.** If a server decides to log requests, they will also be able to receive `Referer` headers. For private/protected websites and direct links sent via IM or email, this isn't a big deal. If the link is on a public website however, it means the server owner might be able to find the original image. Unfortunately there's nothing that the software or server owner can do about this (apart from hosting behind a CDN and offloading the Referer header to the edge), however when posting a link you have a couple of options:
-  1. Put `rel="noreferrer"` into any `<a>` links that are directed at the Up1 server.
+  1. Put `rel="noreferrer"` into any `<a>` links that are directed at the Vpload server.
   2. If you don't have control over the link attributes, you can use a referrer breaker such as https://anon.click/ or https://href.li/, amongst many.
 
 Contributing
@@ -108,7 +109,7 @@ Thank you for you contributions!
 License
 ---
 
-The Up1 server and browser code are both licensed under MIT.
+The Vpload server and browser code are both licensed under MIT.
 
 ShareX's base code is licensed under GPLv2, however the modifications (namely, the C# encryption code) is licensed under MIT.
 
