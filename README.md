@@ -99,7 +99,7 @@ Any contributions, whether to our existing code or as separate applications, are
 
 We don't ask for any CLAs - you don't have to give up copyright on your code - however we prefer that you contribute under the MIT license, just for consistency.
 
-If you find serious security issues, please email us at `security@up1.ca`.
+If you find serious security issues, please email us at `support@vpload.com`.
 
 Some of us idle on `irc.freenode.net` in the `#upload` channel, if you would like to chat!
 
